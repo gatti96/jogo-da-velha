@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --bg-color: #fff;
+  --color-text: #000;
+  background-color: var(--bg-color);
+  color: var(--color-text);
+}
+
+#tema {
+  font-size: 15px;
+  padding: 2px;
+  background-color: var(--color-text);
+  color: var(--bg-color);
+  position: absolute;
+  right: 80px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  font-size: 0;
+}
+
+.title {
+  margin-top: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.form-label {
+  font-size: 15px;
+}
+
+.jogo {
+  width: 900px;
+  margin-bottom: 90px;
+  margin-top: 80px;
+}
+
+.btn-play {
+  width: 30%;
+  height: 250px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: var(--bg-color);
+}
+
+.item-1 {
+  border-right: 6px solid var(--color-text);
+  border-bottom: 6px solid var(--color-text);
+}
+
+.item-2 {
+  border-right: 6px solid var(--color-text);
+  border-bottom: 6px solid var(--color-text);
+}
+
+.item-3 {
+  border-bottom: 6px solid var(--color-text);
+}
+
+.item-4 {
+  border-right: 6px solid var(--color-text);
+  border-bottom: 6px solid var(--color-text);
+}
+
+.item-5 {
+  border-right: 6px solid var(--color-text);
+  border-bottom: 6px solid var(--color-text);
+}
+
+.item-6 {
+  border-bottom: 6px solid var(--color-text);
+}
+
+.item-7 {
+  border-right: 6px solid var(--color-text);
+}
+
+.item-8 {
+  border-right: 6px solid var(--color-text);
+}
