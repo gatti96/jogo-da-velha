@@ -15,14 +15,14 @@
     <title>Jogo da Velha</title>
   </head>
   <body>
-    <main>
+    <main data-theme="light">
       <div class="container">
         <h1 class="title">Jogo da Velha</h1>
         <div>
           <button id="tema">Trocar tema claro/escuro</button>
         </div>
-        <div>
-          <form action="">
+        <div id="formulario">
+          <form action="" id="formplay">
             <div class="mb-3">
               <label for="jogadorum" class="form-label"
                 >Digite o nome do jogador 1:
@@ -46,20 +46,27 @@
               />
             </div>
             <div>
-              <button type="submit" class="btn btn-danger">Jogar!</button>
+              <button type="submit" id="play" class="btn btn-danger">
+                Jogar!
+              </button>
             </div>
           </form>
         </div>
-        <div class="jogo">
-          <button class="item-1 btn-play"></button>
-          <button class="item-2 btn-play"></button>
-          <button class="item-3 btn-play"></button>
-          <button class="item-4 btn-play"></button>
-          <button class="item-5 btn-play"></button>
-          <button class="item-6 btn-play"></button>
-          <button class="item-7 btn-play"></button>
-          <button class="item-8 btn-play"></button>
-          <button class="item-9 btn-play"></button>
+        <div>
+          <div>
+            <input id="vez" class="jogador" type="text" disabled />
+          </div>
+          <div class="jogo">
+            <button class="item-1 btnPlay"></button>
+            <button class="item-2 btnPlay"></button>
+            <button class="item-3 btnPlay"></button>
+            <button class="item-4 btnPlay"></button>
+            <button class="item-5 btnPlay"></button>
+            <button class="item-6 btnPlay"></button>
+            <button class="item-7 btnPlay"></button>
+            <button class="item-8 btnPlay"></button>
+            <button class="item-9 btnPlay"></button>
+          </div>
         </div>
       </div>
     </main>
@@ -70,5 +77,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script src="./JS/jogoDaVlha.js"></script>
   </body>
 </html>
