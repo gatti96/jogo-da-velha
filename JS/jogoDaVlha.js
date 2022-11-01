@@ -125,5 +125,145 @@ function verificarVencedor() {
     document.querySelector(".item-3").style.backgroundColor = "red";
     document.querySelector(".item-5").style.backgroundColor = "red";
     document.querySelector(".item-7").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][0] === "X") &
+    (matriz[1][0] === "X") &
+    (matriz[2][0] === "X")
+  ) {
+    alert(jogador1 + " venceu");
+    vez.value = jogador1 + " venceu!";
+    document.querySelector(".item-1").style.backgroundColor = "red";
+    document.querySelector(".item-4").style.backgroundColor = "red";
+    document.querySelector(".item-7").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][1] === "X") &
+    (matriz[1][1] === "X") &
+    (matriz[2][1] === "X")
+  ) {
+    alert(jogador1 + " venceu");
+    vez.value = jogador1 + " venceu!";
+    document.querySelector(".item-2").style.backgroundColor = "red";
+    document.querySelector(".item-5").style.backgroundColor = "red";
+    document.querySelector(".item-8").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][2] === "X") &
+    (matriz[1][2] === "X") &
+    (matriz[2][2] === "X")
+  ) {
+    alert(jogador1 + " venceu");
+    vez.value = jogador1 + " venceu!";
+    document.querySelector(".item-3").style.backgroundColor = "red";
+    document.querySelector(".item-6").style.backgroundColor = "red";
+    document.querySelector(".item-9").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][0] === "X") &
+    (matriz[0][1] === "X") &
+    (matriz[0][2] === "X")
+  ) {
+    alert(jogador1 + " venceu");
+    vez.value = jogador1 + " venceu!";
+    document.querySelector(".item-1").style.backgroundColor = "red";
+    document.querySelector(".item-2").style.backgroundColor = "red";
+    document.querySelector(".item-3").style.backgroundColor = "red";
+  } else if (
+    (matriz[1][0] === "X") &
+    (matriz[1][1] === "X") &
+    (matriz[1][2] === "X")
+  ) {
+    alert(jogador1 + " venceu");
+    vez.value = jogador1 + " venceu!";
+    document.querySelector(".item-4").style.backgroundColor = "red";
+    document.querySelector(".item-5").style.backgroundColor = "red";
+    document.querySelector(".item-6").style.backgroundColor = "red";
+  } else if (
+    (matriz[2][0] === "X") &
+    (matriz[2][1] === "X") &
+    (matriz[2][2] === "X")
+  ) {
+    alert(jogador1 + " venceu");
+    vez.value = jogador1 + " venceu!";
+    document.querySelector(".item-7").style.backgroundColor = "red";
+    document.querySelector(".item-8").style.backgroundColor = "red";
+    document.querySelector(".item-9").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][0] === "O") &
+    (matriz[1][1] === "O") &
+    (matriz[2][2] === "O")
+  ) {
+    alert(jogador2 + " venceu");
+    vez.value = jogador2 + " venceu!";
+    document.querySelector(".item-1").style.backgroundColor = "red";
+    document.querySelector(".item-5").style.backgroundColor = "red";
+    document.querySelector(".item-9").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][2] === "O") &
+    (matriz[1][1] === "O") &
+    (matriz[2][0] === "O")
+  ) {
+    alert(jogador2 + " venceu");
+    vez.value = jogador2 + " venceu!";
+    document.querySelector(".item-3").style.backgroundColor = "red";
+    document.querySelector(".item-5").style.backgroundColor = "red";
+    document.querySelector(".item-7").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][0] === "O") &
+    (matriz[1][0] === "O") &
+    (matriz[2][0] === "O")
+  ) {
+    alert(jogador2 + " venceu");
+    vez.value = jogador2 + " venceu!";
+    document.querySelector(".item-1").style.backgroundColor = "red";
+    document.querySelector(".item-4").style.backgroundColor = "red";
+    document.querySelector(".item-7").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][1] === "O") &
+    (matriz[1][1] === "O") &
+    (matriz[2][1] === "O")
+  ) {
+    alert(jogador2 + " venceu");
+    vez.value = jogador2 + " venceu!";
+    document.querySelector(".item-2").style.backgroundColor = "red";
+    document.querySelector(".item-5").style.backgroundColor = "red";
+    document.querySelector(".item-8").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][2] === "O") &
+    (matriz[1][2] === "O") &
+    (matriz[2][2] === "O")
+  ) {
+    alert(jogador2 + " venceu");
+    vez.value = jogador2 + " venceu!";
+    document.querySelector(".item-3").style.backgroundColor = "red";
+    document.querySelector(".item-6").style.backgroundColor = "red";
+    document.querySelector(".item-9").style.backgroundColor = "red";
+  } else if (
+    (matriz[0][0] === "O") &
+    (matriz[0][1] === "O") &
+    (matriz[0][2] === "O")
+  ) {
+    alert(jogador2 + " venceu");
+    vez.value = jogador2 + " venceu!";
+    document.querySelector(".item-1").style.backgroundColor = "red";
+    document.querySelector(".item-2").style.backgroundColor = "red";
+    document.querySelector(".item-3").style.backgroundColor = "red";
+  } else if (
+    (matriz[1][0] === "O") &
+    (matriz[1][1] === "O") &
+    (matriz[1][2] === "O")
+  ) {
+    alert(jogador2 + " venceu");
+    vez.value = jogador2 + " venceu!";
+    document.querySelector(".item-4").style.backgroundColor = "red";
+    document.querySelector(".item-5").style.backgroundColor = "red";
+    document.querySelector(".item-6").style.backgroundColor = "red";
+  } else if (
+    (matriz[2][0] === "O") &
+    (matriz[2][1] === "O") &
+    (matriz[2][2] === "O")
+  ) {
+    alert(jogador2 + " venceu");
+    vez.value = jogador2 + " venceu!";
+    document.querySelector(".item-7").style.backgroundColor = "red";
+    document.querySelector(".item-8").style.backgroundColor = "red";
+    document.querySelector(".item-9").style.backgroundColor = "red";
   }
 }
