@@ -50,6 +50,7 @@ button.forEach((btnPlay) =>
       criarInput.disabled = true;
       criarInput.value = valorJogo;
       btnPlay.appendChild(criarInput);
+      btnPlay.disabled = true;
 
       if (btnPlay.classList.contains("item-1")) {
         matriz[0][0] = valorJogo;
@@ -80,6 +81,7 @@ button.forEach((btnPlay) =>
       criarInput.value = valorJogo;
       criarInput.disabled = true;
       btnPlay.appendChild(criarInput);
+      btnPlay.disabled = true;
 
       if (btnPlay.classList.contains("item-1")) {
         matriz[0][0] = valorJogo;
@@ -292,6 +294,9 @@ function buttonRestart() {
 
     const botaoJogo = document.querySelectorAll(".inputJogo");
     botaoJogo.forEach((inputJogo) => inputJogo.remove());
+
+    const activeButton = document.querySelectorAll(".btnPlay");
+    activeButton.forEach((btnPlay) => (btnPlay.disabled = false));
 
     document.querySelector(".item-1").style.backgroundColor = "var(--bg-color)";
     document.querySelector(".item-2").style.backgroundColor = "var(--bg-color)";

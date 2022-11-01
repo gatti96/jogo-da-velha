@@ -59,6 +59,7 @@ body {
 }
 
 .jogador {
+  text-align: center;
   font-size: 20px;
   margin-top: -90px;
   border: none;
@@ -78,6 +79,11 @@ body {
 @media screen and (max-width: 860px) {
   .jogador {
     margin-left: 60px;
+  }
+}
+@media screen and (max-width: 761px) {
+  .jogador {
+    margin-top: 60px;
   }
 }
 
