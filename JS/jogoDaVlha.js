@@ -2,6 +2,7 @@ const main = document.querySelector("main");
 let vez = document.getElementById("vez");
 let valorJogo = "";
 let matriz = [[], [], []];
+let cont = 0;
 
 window.addEventListener("DOMContentLoaded", function () {
   //este evento inicio o site com o cursor no input
@@ -32,6 +33,7 @@ form.addEventListener("submit", function (ev) {
   jogador2 = document.querySelector("input[name='jogadordois']").value;
   document.getElementById("formulario").style.display = "none";
   vez.value = jogador1 + " sua vez!";
+  openPlay();
 });
 
 // criando a função ao clicar no quadrado do jogo
@@ -42,7 +44,7 @@ button.forEach((btnPlay) =>
     if (vez.value === jogador1 + " sua vez!") {
       valorJogo = "X";
       const criarInput = document.createElement("input");
-      criarInput.className = "input-jogo";
+      criarInput.className = "inputJogo";
       criarInput.name = "jogo";
       criarInput.type = "text";
       criarInput.disabled = true;
@@ -72,7 +74,7 @@ button.forEach((btnPlay) =>
     } else if (vez.value === jogador2 + " sua vez!") {
       valorJogo = "O";
       const criarInput = document.createElement("input");
-      criarInput.className = "input-jogo";
+      criarInput.className = "inputJogo";
       criarInput.name = "jogo";
       criarInput.type = "text";
       criarInput.value = valorJogo;
@@ -265,5 +267,51 @@ function verificarVencedor() {
     document.querySelector(".item-7").style.backgroundColor = "red";
     document.querySelector(".item-8").style.backgroundColor = "red";
     document.querySelector(".item-9").style.backgroundColor = "red";
+  } else {
+    for (let i = 0; i < matriz.length; i++) {
+      for (let j = 0; j < matriz.length; j++) {
+        if (matriz[i][j] === "X" || matriz[i][j] === "O") {
+          cont = cont + 1;
+        }
+      }
+    }
+    if (cont === 9) {
+      alert("Empate! \n\n Ninguem ganhou");
+    }
+    cont = 0;
   }
+}
+
+function buttonRestart() {
+  const restart = document.getElementById("section-jogo");
+  const button = document.createElement("button");
+  button.className = "restart btn btn-danger";
+  button.innerText = "Reiniciar jogo";
+  button.onclick = function () {
+    matriz = [[], [], []];
+
+    const botaoJogo = document.querySelectorAll(".inputJogo");
+    botaoJogo.forEach((inputJogo) => inputJogo.remove());
+
+    document.querySelector(".item-1").style.backgroundColor = "var(--bg-color)";
+    document.querySelector(".item-2").style.backgroundColor = "var(--bg-color)";
+    document.querySelector(".item-3").style.backgroundColor = "var(--bg-color)";
+    document.querySelector(".item-4").style.backgroundColor = "var(--bg-color)";
+    document.querySelector(".item-5").style.backgroundColor = "var(--bg-color)";
+    document.querySelector(".item-6").style.backgroundColor = "var(--bg-color)";
+    document.querySelector(".item-7").style.backgroundColor = "var(--bg-color)";
+    document.querySelector(".item-8").style.backgroundColor = "var(--bg-color)";
+    document.querySelector(".item-9").style.backgroundColor = "var(--bg-color)";
+
+    vez.value = jogador1 + " sua vez!";
+  };
+
+  restart.appendChild(button);
+}
+
+//função para abrir o jogo
+function openPlay() {
+  document.querySelector(".jogo").style.display = "grid";
+  document.querySelector(".title").style.display = "none";
+  buttonRestart();
 }
